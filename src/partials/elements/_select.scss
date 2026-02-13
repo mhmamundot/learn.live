@@ -1,0 +1,92 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  row-gap: 8px;
+  &--plan {
+    width: 12rem;
+  }
+  &__option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--tertiary-color);
+    padding: 9px 1.2rem;
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+  &__text,
+  &__icon {
+    color: var(--primary-color);
+  }
+  &__text {
+    font-size: 1.4rem;
+    font-family: 'Plus Jakarta Sans 600';
+    font-weight: 600;
+  }
+  &__icon {
+    font-size: 1.2rem;
+    &--magnify {
+    }
+  }
+  &__content {
+    background-color: var(--tertiary-color);
+    border-radius: 4px;
+    padding: 8px;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: stretch;
+    // justify-content: center;
+    // row-gap: 4px;
+
+    display: none;
+  }
+  &__search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+
+    background-color: var(--secondary-color);
+    padding: 8px 1.2rem;
+    border-radius: 4px;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    &::placeholder {
+      background-color: var(--secondary-color);
+      color: var(--primary-gray-color);
+      font-size: 1.2rem;
+    }
+    &:focus {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      outline: none;
+    }
+  }
+  &__options {
+  }
+  &__item {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-family: 'Plus Jakarta Sans 600';
+    font-weight: 600;
+    padding: 8px 1.2rem;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      padding: 8px 1.2rem;
+      border-radius: 4px;
+    }
+  }
+}

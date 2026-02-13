@@ -1,0 +1,299 @@
+.plan {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4.2rem;
+
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--secondary-bg-color);
+    border-radius: 10rem;
+    border: 4px solid var(--tertiary-bg-color);
+    padding: 4px;
+  }
+  &__tab {
+    font-size: 1.6rem;
+    font-family: 'Plus Jakarta Sans 800', sans-serif;
+    padding: 1.2rem 2rem;
+    border-radius: 10rem;
+    color: var(--pure-white-color);
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &--1,
+    &--2 {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+  &__content {
+    &--1,
+    &--2,
+    &--3 {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.2rem;
+  }
+  &__item {
+    background-color: var(--secondary-bg-color);
+
+    border: 4px solid var(--tertiary-border-color);
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 2.4rem;
+
+    &--recommended {
+      background-color: var(--primary-color);
+      border: 4px solid var(--tertiary-border-color);
+
+      position: relative;
+
+      overflow: hidden;
+
+      .plan__title,
+      .plan__subtitle,
+      .plan__original,
+      .plan__sale,
+      .plan__slash,
+      .plan__period,
+      .plan__discount {
+        color: var(--secondary-color);
+      }
+      .plan__link {
+        &:link,
+        &:visited {
+          background-color: var(--secondary-color);
+          .plan__text,
+          .plan__icon {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .plan__feature .plan__feature-icon,
+      .plan__feature .plan__feature-text {
+        color: var(--secondary-color);
+      }
+
+      &::after {
+        content: 'Recommended';
+        display: inline-block;
+        clear: both;
+
+        background-color: var(--secondary-color);
+        padding: 8px 5rem;
+        border-radius: 5.2rem;
+
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-family: 'Plus Jakarta Sans 800';
+        font-weight: 800;
+
+        position: absolute;
+        top: 4.6rem;
+        right: -16.4rem;
+        transform: translate(-50%, -50%) rotate(-318deg);
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 4px;
+  }
+  &__title,
+  &__subtitle {
+    color: var(--primary-color);
+  }
+  &__title {
+    font-family: 'Plus Jakarta Sans 800';
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  &__subtitle {
+    font-family: 'Plus Jakarta Sans 600';
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  &__pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 4px;
+  }
+  &__amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 2px;
+  }
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 8px;
+  }
+  &__original,
+  &__sale {
+  }
+  &__original {
+    font-size: 1.2rem;
+  }
+  &__original,
+  &__sale,
+  &__slash,
+  &__period,
+  &__discount {
+    color: var(--primary-color);
+    font-family: 'Plus Jakarta Sans 800';
+    font-weight: 800;
+  }
+  &__sale,
+  &__slash,
+  &__period {
+    font-size: 1.6rem;
+  }
+  &__offer {
+  }
+  &__discount {
+    font-size: 1.2rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1.2rem;
+
+      background-color: var(--pure-white-color);
+      width: 100%;
+      padding: 1.2rem;
+      border-radius: 4px;
+
+      .plan__text {
+        color: var(--tertiary-color);
+        font-family: 'Plus Jakarta Sans 800';
+        font-weight: 800;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+      .plan__icon {
+        font-size: 1.4rem;
+        color: var(--tertiary-color);
+
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &:hover,
+    &:active {
+      .plan__icon {
+        transform: translateX(5px);
+      }
+    }
+  }
+  // &__text {
+  //   color: var(--tertiary-color);
+  //   font-family: 'Plus Jakarta Sans 800';
+  //   font-weight: 800;
+  //   font-size: 1.4rem;
+  //   text-transform: uppercase;
+  // }
+  // &__icon {
+  //   font-size: 1.4rem;
+  //   color: var(--tertiary-color);
+  // }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 1.2rem;
+  }
+  &__feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1.2rem;
+  }
+  &__feature-icon {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+  }
+  &__feature-text {
+    color: var(--primary-color);
+    font-family: 'Plus Jakarta Sans 600';
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &__feature-icon,
+  &__feature-text {
+  }
+}
+
+.radio-btn-1:checked ~ .plan .plan__tabs .plan__tab {
+  &--1 {
+    background-color: var(--pure-white-color);
+    color: var(--primary-bg-color);
+  }
+}
+.radio-btn-2:checked ~ .plan .plan__tabs .plan__tab {
+  &--2 {
+    background-color: var(--pure-white-color);
+    color: var(--primary-bg-color);
+  }
+}
+.radio-btn-3:checked ~ .plan .plan__tabs .plan__tab {
+  &--3 {
+    background-color: var(--pure-white-color);
+    color: var(--primary-bg-color);
+  }
+}
+
+.radio-btn-1:checked ~ .plan .plan__container .plan__content--1 {
+  display: block;
+}
+.radio-btn-2:checked ~ .plan .plan__container .plan__content--2 {
+  display: block;
+}
+.radio-btn-3:checked ~ .plan .plan__container .plan__content--3 {
+  display: block;
+}
+
+.radio-btn-1,
+.radio-btn-2,
+.radio-btn-3 {
+  display: none;
+}

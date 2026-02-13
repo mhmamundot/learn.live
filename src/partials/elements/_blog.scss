@@ -1,0 +1,190 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  row-gap: 2.4rem;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 8px;
+  }
+  &__heading-text {
+    color: var(--primary-color);
+    font-family: 'Plus Jakarta Sans 800';
+    font-weight: 800;
+    font-size: 3.2rem;
+  }
+  &__lead-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--primary-gray-color);
+    font-family: 'Plus Jakarta Sans 400';
+    font-weight: 400;
+  }
+  &__navi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.4rem;
+  }
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+  }
+  &__btn {
+    border: none;
+    outline: none;
+
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--left {
+    }
+    &--right {
+    }
+  }
+  &__btn-icon {
+    font-size: 1.6rem;
+    color: var(--tertiary-color);
+  }
+  &__post-link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: var(--tertiary-color);
+      font-family: 'Plus Jakarta Sans 600';
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0 1.2rem;
+      height: 3.6rem;
+      background-color: var(--primary-color);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 4px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  &__item {
+    background-color: var(--secondary-color);
+    border-radius: 1.6rem;
+    overflow: hidden;
+
+    border: 4px solid var(--tertiary-color);
+
+    transition: all 0.2s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      .blog__feature .blog__image {
+        transform: scale(1.1) rotate(2deg);
+      }
+      .blog__content .blog__link .blog__icon {
+        transform: translateX(5px);
+      }
+    }
+  }
+  &__feature {
+    height: 24rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+    object-fit: cover;
+
+    transition: all 0.8s ease-in-out;
+  }
+  &__content {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 2.4rem;
+  }
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 4px;
+  }
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--primary-gray-color);
+    font-family: 'Plus Jakarta Sans 600';
+    font-weight: 600;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-family: 'Plus Jakarta Sans 800';
+    font-weight: 800;
+    color: var(--primary-color);
+
+    transition: all 0.2s ease-in-out;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 1.2rem;
+    }
+    &:hover,
+    &:active {
+    }
+  }
+  &__text,
+  &__icon {
+    color: var(--primary-gray-color);
+  }
+  &__text {
+    font-size: 1.2rem;
+    font-family: 'Plus Jakarta Sans 700';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    line-height: 1.6rem;
+  }
+  &__icon {
+    font-size: 1.4rem;
+    color: var(--primary-gray-color);
+    transition: all 0.2s ease-in-out;
+  }
+}
